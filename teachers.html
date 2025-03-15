@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Teachers - TechLearn AI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        :root {
+            --primary-color: #3a0ca3;
+            --secondary-color: #4cc9f0;
+            --accent-color: #f72585;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .teacher-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .teacher-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .teacher-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            margin-right: 8px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2a0a73;
+            border-color: #2a0a73;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .badge-subject {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">TechLearn AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="teachers.html">Our Teachers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="register.html" class="btn btn-light">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Meet Our Expert Teachers</h1>
+            <p class="lead">Learn from industry professionals with extensive real-world experience</p>
+        </div>
+    </header>
+
+    <!-- Teachers Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Teacher 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card teacher-card h-100">
+                        <img src="images/human.jpg" class="card-img-top teacher-img" alt="Dr. James Wilson">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Talha Siddique</h5>
+                            <p class="text-muted">Machine Learning Expert</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary badge-subject">Machine Learning</span>
+                                <span class="badge bg-primary badge-subject">Neural Networks</span>
+                                <span class="badge bg-primary badge-subject">Computer Vision</span>
+                            </div>
+                            <p class="card-text">Previously a lead researcher at Google AI, Dr. Talha brings 15+ years of experience in machine learning applications. He holds a PhD from Stanford University.</p>
+                            <div class="social-icons mt-3">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Teacher 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card teacher-card h-100">
+                        <img src="images/human.jpg" class="card-img-top teacher-img" alt="Emily Parker">
+                        <div class="card-body">
+                            <h5 class="card-title">Sana Khan</h5>
+                            <p class="text-muted">Full Stack Developer</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary badge-subject">React</span>
+                                <span class="badge bg-primary badge-subject">Node.js</span>
+                                <span class="badge bg-primary badge-subject">MongoDB</span>
+                                <span class="badge bg-primary badge-subject">AWS</span>
+                            </div>
+                            <p class="card-text">With a decade of experience in web development, Sana has built applications for Fortune 500 companies and led dev teams at several successful startups.</p>
+                            <div class="social-icons mt-3">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+                <!-- Teacher 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card teacher-card h-100">
+                        <img src="images/human.jpg" class="card-img-top teacher-img" alt="Dr. Sarah Chen">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Sarah </h5>
+                            <p class="text-muted">AI Applications Specialist</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary badge-subject">NLP</span>
+                                <span class="badge bg-primary badge-subject">Deep Learning</span>
+                                <span class="badge bg-primary badge-subject">Reinforcement Learning</span>
+                            </div>
+                            <p class="card-text">Dr. Sarah is a former research scientist at OpenAI with publications in top AI conferences. She specializes in practical AI applications for real-world problems.</p>
+                            <div class="social-icons mt-3">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">TechLearn AI</h5>
+                    <p>Your destination for top-quality AI and technology education, designed to prepare you for the jobs of tomorrow.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="courses.html">Courses</a></li>
+                        <li class="mb-2"><a href="teachers.html">Our Teachers</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Tech Street, Islamabad, Pakistan</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@techlearnai.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 TechLearn AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

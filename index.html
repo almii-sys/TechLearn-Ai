@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLearn AI - Learn AI and Technology</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3a0ca3;
+            --secondary-color: #4cc9f0;
+            --accent-color: #f72585;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background-color: var(--primary-color); }
+        .navbar-brand { font-weight: bold; color: white !important; }  
+        .nav-link { color: rgba(255, 255, 255, 0.85) !important; }
+        .nav-link:hover { color: white !important; }
+        .hero-section { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 5rem 0; }
+        .card { transition: transform 0.3s; margin-bottom: 20px; border: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .card:hover { transform: translateY(-10px); }
+        .card-img-top { height: 180px; object-fit: cover; }
+        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+        .btn-primary:hover { background-color: #2a0a73; border-color: #2a0a73; }
+        .btn-outline-primary { color: var(--primary-color); border-color: var(--primary-color); }
+        .btn-outline-primary:hover { background-color: var(--primary-color); color: white; }
+        .feature-icon { background-color: var(--secondary-color); color: white; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 2rem; margin-bottom: 1.5rem; }
+        footer { background-color: var(--dark-color); color: white; padding: 3rem 0; }
+        footer a { color: var(--secondary-color); text-decoration: none; }
+        footer a:hover { color: white; text-decoration: underline; }
+        @media (min-width: 1800px) {
+            .container { max-width: 1700px; }
+            .card-img-top { height: 220px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">TechLearn AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Our Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="register.html" class="btn btn-light">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Master AI & Technology Skills</h1>
+            <p class="lead mb-5">Learn from industry experts and build the skills you need for the future of technology.</p>
+            <div>
+                <a href="courses.html" class="btn btn-light btn-lg me-3">Browse Courses</a>
+                <a href="register.html" class="btn btn-outline-light btn-lg">Start Learning</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Courses</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="images/Ml.jpg" class="card-img-top" alt="Machine Learning">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Bestseller</span>
+                            <h5 class="card-title">Machine Learning Fundamentals</h5>
+                            <p class="card-text">Learn the core concepts and algorithms behind machine learning with hands-on projects.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=GwIo3gDZCVQ" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="images/webdev.jpg" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">New</span>
+                            <h5 class="card-title">Full Stack Web Development</h5>
+                            <p class="card-text">Become a proficient web developer with modern frameworks and tools.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=JMUxmLyrhSk" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="images/ai.jpg" class="card-img-top" alt="AI Development">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Advanced</span>
+                            <h5 class="card-title">AI Application Development</h5>
+                            <p class="card-text">Learn to build and deploy AI applications that solve real-world problems.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=JMUxmLyrhSk" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="courses.html" class="btn btn-outline-primary">View All Courses</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">TechLearn AI</h5>
+                    <p>Your destination for top-quality AI and technology education, designed to prepare you for the jobs of tomorrow.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="courses.html">Courses</a></li>
+                        <li class="mb-2"><a href="teachers.html">Our Teachers</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">123 Tech Street, Islamabad, Pakistan</li>
+                        <li class="mb-2">info@techlearnai.com</li>
+                        <li class="mb-2">(123) 456-7890</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="me-3 text-white">Facebook</a>
+                        <a href="#" class="me-3 text-white">Twitter</a>
+                        <a href="#" class="me-3 text-white">LinkedIn</a>
+                        <a href="#" class="me-3 text-white">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 TechLearn AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

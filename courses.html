@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - TechLearn AI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        :root {
+            --primary-color: #3a0ca3;
+            --secondary-color: #4cc9f0;
+            --accent-color: #f72585;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2a0a73;
+            border-color: #2a0a73;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">TechLearn AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Our Teachers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="register.html" class="btn btn-light">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Explore Our Courses</h1>
+            <p class="lead">Discover a wide range of technology and AI courses designed to boost your skills and career</p>
+        </div>
+    </header>
+
+    <!-- Course Filters -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search courses...">
+                        <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <button class="btn btn-outline-primary filter-btn active me-2 mb-2 mb-md-0">All</button>
+                    <button class="btn btn-outline-primary filter-btn me-2 mb-2 mb-md-0">AI & Machine Learning</button>
+                    <button class="btn btn-outline-primary filter-btn me-2 mb-2 mb-md-0">Web Development</button>
+                    <button class="btn btn-outline-primary filter-btn mb-2 mb-md-0">Data Science</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Listings -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Popular Courses</h2>
+            <div class="row">
+                <!-- Course 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/Ml.jpg" class="card-img-top" alt="Machine Learning">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Bestseller</span>
+                            <h5 class="card-title">Machine Learning Fundamentals</h5>
+                            <p class="card-text">Learn the core concepts and algorithms behind machine learning with hands-on projects.</p>
+                            
+
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=GwIo3gDZCVQ" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/webdev.jpg" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">New</span>
+                            <h5 class="card-title">Full Stack Web Development</h5>
+                            <p class="card-text">Become a proficient web developer with modern frameworks and tools.</p>
+                    
+                        
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=JMUxmLyrhSk" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/ai.jpg" class="card-img-top" alt="AI Development">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Advanced</span>
+                            <h5 class="card-title">AI Application Development</h5>
+                            <p class="card-text">Learn to build and deploy AI applications that solve real-world problems.</p>
+                           
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=JMUxmLyrhSk" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/datascience.jpg" class="card-img-top" alt="Data Science">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Popular</span>
+                            <h5 class="card-title">Data Science & Visualization</h5>
+                            <p class="card-text">Master data analysis, visualization techniques, and storytelling with data.</p>
+                           
+                        
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=-ETQ97mXXF0" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/python.jpg" class="card-img-top" alt="Python Programming">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Beginner</span>
+                            <h5 class="card-title">Python Programming for AI</h5>
+                            <p class="card-text">Learn Python programming with a focus on AI and machine learning applications.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=7O60HOZRLng" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/deeplearning.jpg" class="card-img-top" alt="Deep Learning">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Advanced</span>
+                            <h5 class="card-title">Deep Learning Specialization</h5>
+                            <p class="card-text">Dive deep into neural networks, CNNs, RNNs, and transformers for advanced AI applications.</p>
+                          
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="https://www.youtube.com/watch?v=DooxDIRAkPA" class="btn btn-primary w-100">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h3 class="mb-4">Stay Updated with Latest Courses</h3>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                        </div>
+                        <div class="col-md-auto">
+                            <button type="submit" class="btn btn-light btn-lg">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">TechLearn AI</h5>
+                    <p>Your destination for top-quality AI and technology education, designed to prepare you for the jobs of tomorrow.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="courses.html">Courses</a></li>
+                        <li class="mb-2"><a href="teachers.html">Our Teachers</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Tech Street, Islamabad, Pakistan</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@techlearnai.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3 text-white fs-5"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 TechLearn AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

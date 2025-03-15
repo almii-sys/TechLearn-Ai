@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechLearn AI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        :root {
+            --primary-color: #3a0ca3;
+            --secondary-color: #4cc9f0;
+            --accent-color: #f72585;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .milestone-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .milestone-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .milestone-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(76, 201, 240, 0.1);
+            color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .team-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-social {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .team-img-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-img-container:hover .team-social {
+            opacity: 1;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2a0a73;
+            border-color: #2a0a73;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">TechLearn AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Our Teachers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="register.html" class="btn btn-light">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">About TechLearn AI</h1>
+            <p class="lead">Educational website designed to empower students.</p>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/ai.jpg" alt="TechLearn AI Team" class="img-fluid about-img">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">About</h2>
+                    <p class="lead mb-4">TechLearn Ai is a website designed to give students knowldge and easy access to courses related to ai , under one roof.</p>
+                    <p class="mb-4">It is designed by me , Almeerah Firdouse .Using the <B>HTML</B> ,<B>CSS</B> and <b>Bootstrap</b>.</p>
+                    <p>Moreover, helping tools such as Chatgpt, Youtube ,ClaudeAi, and Chrome have been used for the completion of this project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- tech used Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Tech Used</h2>
+                    <p class="lead mb-0">Development tools used in making this Website.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center"> <!-- Center-align the cards -->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="images/bootstrap-logo.jpg" alt="Bootstrap" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">Bootstrap</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="images/html.jpg" alt="HTML" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">HTML</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="images/css.jpg" alt="CSS" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">CSS</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">TechLearn AI</h5>
+                    <p>Your destination for top-quality AI and technology education, designed to prepare you for the jobs of tomorrow.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="courses.html">Courses</a></li>
+                        <li class="mb-2"><a href="teachers.html">Our Teachers</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Tech Street, Islamabad,Pakistan</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@techlearnai.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+                    </ul>
+                </div>
