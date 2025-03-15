@@ -35,7 +35,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/TechLearn-AI.git
+git clone https://github.com/almii-sys/TechLearn-AI.git
 Navigate to the project folder:
 bash
 Copy
